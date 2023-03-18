@@ -30,7 +30,6 @@ public class Car {
     public void setWeight(int weight) {
         this.weight = weight;
     }
-
     public void setDownforce(int downforce) {
         if(downforce > 10){
             downforce = 10;
@@ -56,4 +55,5 @@ public class Car {
     public int getWeight() {
         return weight;
     }
+
 }

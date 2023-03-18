@@ -5,13 +5,30 @@ public class CPUCar extends Car{
     public void generateCar(){
         System.out.println("Generating computer car...");
         setCarName(generateRandomName());
-        setGrip(generateRandom(1,10));
-        setDownforce(generateRandom(1,10));
-        setHorsepower(generateRandom(1,1500));
-        setWeight(generateRandom(1,3000));
+        setGrip(0);
+        setDownforce(0);
+        setHorsepower(0);
+        setWeight(0);
     }
     public int generateRandom(int minimum, int maximum){
         return (int)(Math.random() * (maximum - minimum)) + minimum;
+    }
+    @Override
+    public void setGrip(int grip) {
+        super.setGrip(generateRandom(1,10));
+    }
+    @Override
+    public void setDownforce(int downforce) {
+        super.setDownforce(generateRandom(1,10));
+    }
+    @Override
+    public void setHorsepower(int horsepower) {
+        super.setHorsepower(generateRandom(1,1500));
+    }
+
+    @Override
+    public void setWeight(int weight) {
+        super.setWeight(generateRandom(1,3000));
     }
 
     public String generateRandomName(){
