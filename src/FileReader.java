@@ -34,7 +34,6 @@ public final class FileReader {
     }
 
     public static void writeRaceTimes(String input) {
-        //thanks little bro (he did this with stringbuilders and I replaced it)
         try {
             FileWriter writer = null;
             Path path = Path.of("src" + File.separator + "racetimes.txt");
