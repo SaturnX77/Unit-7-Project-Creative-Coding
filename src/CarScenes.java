@@ -27,20 +27,7 @@ public class CarScenes extends Scene {
         System.out.println("Loading car preview...100.0%");
     }
 
-//    private void loadCarPreview(ArrayList<Image> car, int frames){
-//        for(int i = 0; i < frames; i ++){
-//            drawImage(car.get(i),0,0,400);
-//            pause(0.1);
-//            if(i % 60 == 0){
-//                System.out.println("Loading car preview..." + ((double)i/frames * 100) + "%");
-//            }
-//        }
-//        System.out.println("Loading car preview...100.0%");
-//    }
-
     private void transitionScene(Car car, CPUCar cpuCar){
-//        fadeTransition();
-//        loadCarPreview(UserInteraction.getCarArrayList(cpuCar.getCarName()),80);
         fadeTransition();
         clear("silver");
         drawImage(UserInteraction.getCarArrayList(car.getCarName()).get(214),-200,0,400);

@@ -1,6 +1,8 @@
 public class DragRace {
     Car userCar;
     CPUCar cpuCar;
+
+    static int raceCounter = 0;
     public DragRace(Car userCar, CPUCar cpuCar){
         this.userCar = userCar;
         this.cpuCar = cpuCar;
@@ -16,6 +18,8 @@ public class DragRace {
         System.out.println("Computer time: " + cpuTime + "sec");
         getWinner(userTime,cpuTime);
         UserInteraction.playRace(userCar,cpuCar,userTime,cpuTime);
+        raceCounter++;
+        FileReader.writeRaceTimes("Race: " + raceCounter + "\nPlayer time (seconds): " + userTime + "\nComputer time (seconds): " + cpuTime);
     }
     private double calculateTime(Car car, int launch){
         double weightLBs = car.getWeight() * 2.20462;
